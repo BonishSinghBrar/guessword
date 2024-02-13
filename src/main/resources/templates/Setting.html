@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setting</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="http://localhost:8080/dashboard" class="navbar-brand">Home</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <a href="http://localhost:8080/sign" class="nav-item active nav-link">Sign up</a>
+            <a href="http://localhost:8080/Setting" class="nav item active nav-link">Setting</a>
+            <a href="http://localhost:8080/" class="nav item active nav-link">logout</a>
+        </ul>
+
+        <form action="#" method="post" class="form-inline my-2 mylg-0">
+            <input type="search" name="buscar" id="buscar" class="form-control mr-sm-2" placeholder="Type your question here" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<h1> This is for the admin only</h1>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Changes in tbl_word</h4>
+            </div>
+            <div class="card-body">
+                <!-- Modified form action and method -->
+                <form action="/changeWord" method="post">
+                    <div class="form-group">
+                        <label for="word">Word:</label>
+                        <input type="text" class="form-control" id="word" name="word" placeholder="Enter new word">
+                    </div>
+                    <div class="form-group">
+                        <label for="hints">Hints:</label>
+                        <input type="text" class="form-control" id="hints" name="hints" placeholder="Enter new hint">
+                    </div>
+                    <div class="form-group">
+                        <label for="level">Level:</label>
+                        <input type="text" class="form-control" id="level" name="level" placeholder="Edit the level">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

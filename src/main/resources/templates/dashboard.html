@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/Style.css}" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+</head>
+<body>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="http://localhost:8080/dashboard" class="navbar-brand">Home</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <a href="http://localhost:8080/sign" class="nav-item active nav-link">Sign up</a>
+            <a href="http://localhost:8080/setting" class="nav item active nav-link">Setting</a>
+            <a href="http://localhost:8080/" class="nav item active nav-link">logout</a>
+
+        </ul>
+
+        <form action="#" method="post" class="form-inline my-2 mylg-0">
+            <input type="search" name="buscar" id="buscar" class="form-control mr-sm-2" placeholder="Type your question here" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<h2>Welcome, <span th:text="${user.name}"></span>!</h2>
+<h2>Your score is <span th:text="${user.score}"></span>!</h2>
+
+<div class="center">
+    <a href="/game">Start Game</a>
+</div>
+</body>
+</html>
